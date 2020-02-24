@@ -1,0 +1,529 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 50px 800px auto auto auto auto auto 95px;
+  grid-template-areas: "navigatie" "home" "about" "whatIDo" "experiences" "skills" "contact" "footer";
+  margin: 0;
+  height: 100vh;
+}
+
+.icons {
+  width: 30px;
+  color: orangered;
+}
+
+/*#region Socialmedia*/
+.socialMedia li {
+  display: inline-block;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+}
+
+.socialMedia li:hover {
+  color: black;
+  background-color: orangered;
+}
+
+.big {
+  font-size: 30px;
+}
+
+.big:hover {
+  color: black;
+}
+
+/*#endregion Socialmedia*/
+
+/*#region Navigatie */
+.navbar {
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+/*.navbar a {
+  float: left;
+  font-size: 16px;
+  color: whitesmoke;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}*/
+
+li,
+a {
+  font-weight: bold;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: whitesmoke;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #24252a;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: whitesmoke;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255, 68, 0, 0.795);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn:hover {
+  color: orangered;
+}
+
+/*#endregion Navigatie */
+
+/*#region Home */
+#background {
+  margin-top: -50px;
+  grid-area: home;
+  background-color: #100e17;
+  background-image: url("../img/home-bg-img.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+#filter {
+  grid-area: home;
+  background-color: rgb(0, 0, 0, 0.9);
+  display: flex;
+  flex-wrap: wrap-reverse;
+  min-height: 850px;
+  max-height: 850px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#greetings {
+  background-color: orangered;
+  width: 100px;
+  height: 20px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0px;
+}
+
+h2 {
+  margin: 6px 0 6px 0;
+}
+
+h3 {
+  margin: 6px 0 6px 0;
+}
+
+#profielFotoContainer {
+  border-radius: 50%;
+  min-width: 340px;
+  max-width: 340px;
+  border: 30px solid black;
+  background-color: black;
+}
+
+#profielFoto {
+  border-radius: 50%;
+  min-width: 340px;
+  max-width: 340px;
+}
+/*#endregion Home*/
+
+/*#region About*/
+#about {
+  grid-area: about;
+  background-color: #100e17;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 3% 0 3%;
+}
+
+#aboutIllustration {
+  max-width: 500px;
+  width: 100%;
+}
+
+#aboutIllustrationContainer {
+  min-width: 340px;
+  max-width: 500px;
+  margin: 30px 0 30px 0;
+}
+
+#aboutTextContainer {
+  min-width: 340px;
+  max-width: 550px;
+  margin: 30px 0 30px 0;
+}
+
+#aboutTextContainer ul li {
+  display: inline-block;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid orangered;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#cvButton {
+  text-align: center;
+}
+
+#cvButton a {
+  background-color: orangered;
+  width: 120px;
+  height: 20px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 20px;
+}
+
+/*#endregion About*/
+
+/*#region WhatIDo*/
+#whatIDo {
+  grid-area: whatIDo;
+  background-color: #100e17;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#sectionWhatIDo {
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.contain:hover {
+  transform: scale(1.05);
+}
+
+.contain h2 {
+  margin: 0;
+  text-align: center;
+  height: 50px;
+}
+
+.contain {
+  padding-top: 15px;
+  background-color: #24252a;
+  height: 200px;
+  width: 290px;
+  margin: 30px 20px 60px 20px;
+  padding: 20px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: -1rem 0 3rem #000;
+  text-align: center;
+}
+
+/*#endregion WhatIDo*/
+
+/*#region Experiences*/
+#experiences {
+  grid-area: experiences;
+  background-color: #100e17;
+  background-image: url("../img/home-bg-img.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+#filterExperiences {
+  grid-area: home;
+  background-color: rgb(0, 0, 0, 0.9);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2%;
+}
+
+#filterExperiences h2 {
+  margin: 0 40px 0 40px;
+}
+
+.expContain {
+  background-color: #24252a;
+
+  max-width: 600px;
+  margin: 30px 40px 40px 40px;
+  padding: 20px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: -1rem 0 3rem #000;
+}
+
+.expContain h3 {
+  margin: 0;
+}
+
+.textColor {
+  color: orangered;
+  margin: 0;
+}
+
+/*#endregion Experiences*/
+
+/*#region Skills*/
+#skills {
+  grid-area: skills;
+  background-color: #100e17;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0% 3% 8% 3%;
+}
+
+.skillContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 200px;
+  width: 200px;
+}
+
+.skillTitle {
+  width: 100%;
+  text-align: center;
+}
+
+.circleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.percent {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 50px #000;
+}
+
+#SCCM circle:nth-child(2) {
+  stroke-dasharray: 316;
+}
+
+#CCNA circle:nth-child(2) {
+  stroke-dasharray: 431;
+}
+
+#O365 circle:nth-child(2) {
+  stroke-dasharray: 330;
+}
+
+#powershell circle:nth-child(2) {
+  stroke-dasharray: 264;
+}
+
+#csharp circle:nth-child(2) {
+  stroke-dasharray: 400;
+}
+
+#javascript circle:nth-child(2) {
+  stroke-dasharray: 431;
+}
+
+#html circle:nth-child(2) {
+  stroke-dasharray: 440;
+}
+
+#css circle:nth-child(2) {
+  stroke-dasharray: 440;
+}
+
+.percent:nth-child(1) svg circle:nth-child(2) {
+  stroke: orangered;
+}
+
+svg {
+  width: 150px;
+}
+
+svg circle {
+  fill: none;
+  stroke: #191919;
+  stroke-width: 5;
+  transform: translate(5px, 5px);
+}
+
+/*#endregion Skills*/
+
+/*#region Footer */
+footer {
+  grid-area: footer;
+  background-color: #24252a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1% 0 1%;
+}
+
+footer p {
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease 0s;
+}
+
+footer p:hover {
+  color: orangered;
+  cursor: default;
+}
+
+#logo {
+  width: 3%;
+  margin: 5px 10px 5px 10px;
+}
+
+/*#endregion Footer */
+
+/*#region Contact */
+#contact {
+  grid-area: contact;
+  background-color: #100e17;
+  background-image: url("../img/map-color-overlay.png");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#contactInfo {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.infoContain {
+  display: flex;
+  flex-flow: row wrap-reverse;
+  padding-top: 15px;
+  background-color: #24252a;
+  min-height: 50px;
+  max-width: 420px;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: -1rem 0 3rem #000;
+}
+
+.infoContain h3 {
+  width: 100%;
+}
+
+.kader {
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  padding-top: 25px;
+  border: 2px solid orangered;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+#formContainer {
+  max-width: 800px;
+  width: 100%;
+}
+
+form {
+  min-width: 250px;
+  max-width: 800px;
+}
+
+.inputLayout {
+  border: 1px solid darkgray;
+  background: transparent;
+  margin: 15px;
+  color: whitesmoke;
+  height: 50px;
+  width: 90%;
+  border-radius: 15px;
+  font-size: 16px;
+}
+
+#beschrijving {
+  height: 150px;
+}
+
+.btnSubmit {
+  background-color: rgba(255, 68, 0, 0.575);
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+/*#endregion Ccontact */
+
+/*#region Animations */
+.fadeIn {
+  animation: fadeIn 0.7s;
+}
+
+.slideUp {
+  animation: slideUp 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(250px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*#endregion Animations*/
